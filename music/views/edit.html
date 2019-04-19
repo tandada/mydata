@@ -1,0 +1,41 @@
+{{ extend './layout/main.html'}}
+   
+{{block 'content'}}
+    <div class="container">
+        <div class="page-header">
+            <h1><a href="/">我的音乐</a><small>--编辑音乐</small><h1>
+        </div>
+    </div>
+    <div class="container">
+        <form id="form" method="post" action="">
+            <div class="form-group">
+                <label for="">歌曲编号</label>
+                <input type="text" name="id" class="form-control" readonly  value='{{music.mid}}'>
+            </div>
+            <div class="form-group">
+                <label for="">歌曲标题</label>
+                <input type="text" name="title" class="form-control" value="{{music.title}}" >
+            </div>
+            <div class="form-group">
+                <label for="">歌曲时长</label>
+                <input type="text" name="time" class="form-control" value="{{music.time}}" >
+            </div>
+            <div class="form-group">
+                <label for="">歌手</label>
+                <input type="text" name="singer" class="form-control" value="{{music.singer}}" >
+            </div>
+            <div class="form-group">
+                <label for="">歌曲文件</label>
+                <input type="file" name="file">
+                <p class="help-block">请上传歌曲文件.</p>
+            </div>
+            <div class="form-group">
+                <label for="">歌词文件</label>
+                <input type="file" name="filelrc" >
+                <p class="help-block">请上传歌曲文件.</p>
+            </div>
+            <button type="submit" class="btn btn-success">完成编辑</button>
+
+        </form>
+    </div>
+{{/block}}
